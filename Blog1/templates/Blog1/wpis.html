@@ -1,0 +1,19 @@
+{% extends 'Blog1/baza.html' %}
+
+{% block content %}
+
+<div class='post> 
+    <div class='date'>
+        {% if post.data_publikacji %}
+        </div>
+        {{ post.data_publikacji}}
+        </div>
+    {% endif %}
+    <a class='btn btn-dafault' href="{% url 'Blog1:edycja' pk=post.pk %}">
+    <span class="glyphicon glyphicon-pencil"></span></a>
+    <h1>{{ post.tytul }} </h1>
+    <p>{{ post.tresc | linebreaksbr }} </p>
+    </div>
+
+
+{% endblock content %}
